@@ -186,6 +186,12 @@
     font-size:23px;line-height:1.16;margin:0 0 14px;letter-spacing:-.005em;
   }
   .area p{margin:0;font-size:16.5px;color:#324551;line-height:1.6;}
+  .area .list{margin:18px 0 0;padding:0;list-style:none;}
+  .area .list li{
+    font-size:15px;color:#42525b;padding:7px 0;border-top:1px solid var(--line);
+    display:flex;gap:9px;align-items:baseline;
+  }
+  .area .list li::before{content:"—";color:var(--steel);}
 
   /* how I work */
   .hiw{
@@ -201,42 +207,6 @@
   }
   .principle p{margin:0;font-size:17px;color:#324551;line-height:1.6;}
 
-  /* writing preview on homepage */
-  .writing-section{border-top:1px solid var(--line);background:var(--paper);}
-  .article-card{
-    border:1px solid var(--line);
-    padding:36px;
-    background:var(--mist);
-    border-radius:2px;
-    transition:border-color .2s ease, transform .2s ease;
-  }
-  .article-card:hover{
-    border-color:var(--steel);
-    transform:translateY(-2px);
-  }
-  .article-card h2{
-    font-family:"Newsreader",Georgia,serif;
-    font-size:26px;
-    font-weight:600;
-    color:var(--ink);
-    margin:0 0 12px;
-    line-height:1.2;
-  }
-  .article-card h2 a{
-    text-decoration:none;
-    color:inherit;
-  }
-  .article-card h2 a:hover{
-    color:var(--steel);
-  }
-  .article-card p{
-    margin:0;
-    font-size:16.5px;
-    color:#42525b;
-    line-height:1.6;
-    max-width:72ch;
-  }
-
   /* about teaser */
   .about-band{background:var(--ink);color:#eaf1f5;}
   .about-band section{padding:76px 0;}
@@ -248,6 +218,8 @@
   }
   .about-band p{color:#cbdae4;font-size:16.5px;margin:0 0 18px;}
   .about-band p strong{color:#fff;font-weight:600;}
+  .about-band a.txt{color:#fff;text-decoration:none;border-bottom:1.5px solid var(--steel);padding-bottom:2px;font-weight:500;}
+  .about-band a.txt:hover{border-color:#fff;}
   .about-band .txt-soon{color:#7f9fb5;font-weight:500;font-size:15px;letter-spacing:.01em;}
   .about-band .txt-soon a{color:#fff;text-decoration:underline;}
 
@@ -264,6 +236,7 @@
   .cell .val{font-family:"Hanken Grotesk",sans-serif;font-size:15px;color:var(--ink);line-height:1.55;}
   .cell .val a{text-decoration:none;border-bottom:1px solid var(--silver);}
   .cell .val a:hover{border-color:var(--steel);color:var(--steel);}
+  .cell .val .tk{background:#fff4d6;padding:1px 5px;border:1px dashed #d3a83a;color:#8a6b16;font-size:12px;}
 
   .contact-cta{margin-top:38px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;}
   .contact-cta p{margin:0;font-size:15px;color:#52626b;max-width:44ch;}
@@ -440,23 +413,6 @@
         <p>I focus on land use, entitlements, and administrative disputes. I'm eager to work with
         those connecting the dots on building better American cities.</p>
       </div>
-    </div>
-  </section>
-</div>
-
-<!-- ============ WRITING ============ -->
-<div class="writing-section">
-  <section class="wrap">
-    <div class="sec-head reveal" style="margin-bottom:32px;">
-      <span class="mono">Writing</span>
-      <h2 class="oneline">Constitutional structure and administrative law.</h2>
-    </div>
-
-    <div class="reveal">
-      <article class="article-card">
-        <h2><a href="/rules-vs-laws">Rules vs. Laws and the Property Clause Theory of Administrative Law</a></h2>
-        <p>How conflating Article I coercive legislation with Article IV proprietary administration fractured the foundations of US administrative law.</p>
-      </article>
     </div>
   </section>
 </div>
