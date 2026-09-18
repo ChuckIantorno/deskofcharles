@@ -201,41 +201,40 @@
   }
   .principle p{margin:0;font-size:17px;color:#324551;line-height:1.6;}
 
-  /* writing section */
-  .writing{border-top:1px solid var(--line);background:var(--paper);}
-  .writing-list{display:flex;flex-direction:column;gap:24px;}
-  .writing-item{
+  /* writing preview on homepage */
+  .writing-section{border-top:1px solid var(--line);background:var(--paper);}
+  .article-card{
     border:1px solid var(--line);
-    padding:32px;
+    padding:36px;
     background:var(--mist);
     border-radius:2px;
     transition:border-color .2s ease, transform .2s ease;
   }
-  .writing-item:hover{
+  .article-card:hover{
     border-color:var(--steel);
     transform:translateY(-2px);
   }
-  .writing-item h3{
+  .article-card h2{
     font-family:"Newsreader",Georgia,serif;
-    font-size:24px;
+    font-size:26px;
     font-weight:600;
     color:var(--ink);
-    margin:0 0 10px;
+    margin:0 0 12px;
     line-height:1.2;
   }
-  .writing-item h3 a{
+  .article-card h2 a{
     text-decoration:none;
     color:inherit;
   }
-  .writing-item h3 a:hover{
+  .article-card h2 a:hover{
     color:var(--steel);
   }
-  .writing-item p{
+  .article-card p{
     margin:0;
-    font-size:16px;
+    font-size:16.5px;
     color:#42525b;
     line-height:1.6;
-    max-width:70ch;
+    max-width:72ch;
   }
 
   /* about teaser */
@@ -339,7 +338,7 @@
     <nav class="links" id="nav">
       <a href="/">Home</a>
       <a class="soon" title="Coming soon">About</a>
-      <a href="#writing">Writing</a>
+      <a href="/rules-vs-laws">Writings</a>
       <a class="cta" href="#contact">Get in touch</a>
     </nav>
   </div>
@@ -446,17 +445,16 @@
 </div>
 
 <!-- ============ WRITING ============ -->
-<div class="writing" id="writing">
+<div class="writing-section">
   <section class="wrap">
-    <div class="sec-head reveal">
-      <span class="mono">Writing &amp; Legal Analysis</span>
+    <div class="sec-head reveal" style="margin-bottom:32px;">
+      <span class="mono">Writing</span>
       <h2 class="oneline">Constitutional structure and administrative law.</h2>
-      <p class="sec-lead">Occasional essays and briefs examining statutory interpretation, separation of powers, and the structural mechanics of federal administration.</p>
     </div>
 
-    <div class="writing-list reveal">
-      <article class="writing-item">
-        <h3><a href="/rules-vs-laws">Rules vs. Laws and the Property Clause Theory of Administrative Law</a></h3>
+    <div class="reveal">
+      <article class="article-card">
+        <h2><a href="/rules-vs-laws">Rules vs. Laws and the Property Clause Theory of Administrative Law</a></h2>
         <p>How conflating Article I coercive legislation with Article IV proprietary administration fractured the foundations of US administrative law.</p>
       </article>
     </div>
