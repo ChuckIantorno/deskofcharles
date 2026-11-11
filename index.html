@@ -184,30 +184,30 @@
     margin:20px 0 0;font-size:18px;line-height:1.6;color:#33454f;max-width:60ch;
   }
 
-  /* practice areas */
+  /* practice areas — dark blue button-cards */
   .practice{background:var(--mist);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
   .areas{
     display:grid;grid-template-columns:repeat(3,1fr);gap:0;
-    border:1px solid var(--line);background:var(--paper);
+    border:1px solid var(--line-strong);background:var(--ink);
   }
   .area{
-    display:block;padding:38px 32px;border-right:1px solid var(--line);
+    display:block;padding:38px 32px;border-right:1px solid rgba(255,255,255,.15);
     text-decoration:none;color:inherit;position:relative;
+    background:var(--ink);
     transition:background .25s ease;
+    cursor:default;
   }
-  .area:hover{background:var(--mist);}
+  .area:hover{background:#1a4a66;}
   .area:last-child{border-right:none;}
   .area h3{
-    font-family:"Newsreader",Georgia,serif;font-weight:600;color:var(--ink);
+    font-family:"Newsreader",Georgia,serif;font-weight:600;color:#fff;
     font-size:23px;line-height:1.16;margin:0 0 14px;letter-spacing:-.005em;
-    transition:color .2s ease;
   }
-  .area:hover h3{color:var(--steel);}
-  .area p{margin:0;font-size:16.5px;color:#324551;line-height:1.6;}
+  .area p{margin:0;font-size:16.5px;color:#cbdae4;line-height:1.6;}
   .area .more{
     display:inline-flex;align-items:center;gap:7px;margin-top:22px;
     font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
-    color:var(--steel);
+    color:#8fb6cf;
   }
   .area .more .arw{transition:transform .2s ease;}
   .area:hover .more .arw{transform:translateX(3px);}
@@ -225,22 +225,6 @@
     font-family:"Newsreader",Georgia,serif;font-weight:600;color:var(--ink);font-size:23px;margin:0 0 11px;
   }
   .principle p{margin:0;font-size:17px;color:#324551;line-height:1.6;}
-
-  /* about teaser */
-  .about-band{background:var(--ink);color:#eaf1f5;}
-  .about-band section{padding:76px 0;}
-  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start;}
-  .about-band .mono{color:#8fb6cf;}
-  .about-band h2{
-    font-family:"Newsreader",Georgia,serif;font-weight:500;font-size:clamp(24px,3vw,32px);
-    color:#fff;line-height:1.14;margin:14px 0 0;letter-spacing:-.01em;
-  }
-  .about-band p{color:#cbdae4;font-size:16.5px;margin:0 0 18px;}
-  .about-band p strong{color:#fff;font-weight:600;}
-  .about-band a.txt{color:#fff;text-decoration:none;border-bottom:1.5px solid var(--steel);padding-bottom:2px;font-weight:500;}
-  .about-band a.txt:hover{border-color:#fff;}
-  .about-band .txt-soon{color:#cbdae4;font-weight:400;font-size:15.5px;line-height:1.6;letter-spacing:.01em;}
-  .about-band .txt-soon a{color:#fff;text-decoration:underline;text-underline-offset:3px;}
 
   /* contact spec sheet */
   .contact{border-top:1px solid var(--line);}
@@ -281,10 +265,9 @@
     .hero-grid{grid-template-columns:1fr;gap:40px;padding:60px 0 68px;}
     .portrait{max-width:300px;margin:0 auto;}
     .areas{grid-template-columns:1fr;}
-    .area{border-right:none;border-bottom:1px solid var(--line);}
+    .area{border-right:none;border-bottom:1px solid rgba(255,255,255,.15);}
     .area:last-child{border-bottom:none;}
     .principles{grid-template-columns:1fr;gap:30px;}
-    .about-grid{grid-template-columns:1fr;gap:26px;}
     .sheet{grid-template-columns:1fr;}
     .cell{border-right:none !important;}
     .sheet .cell:not(:last-child){border-bottom:1px solid var(--line);}
@@ -327,7 +310,7 @@
 
     <nav class="links" id="nav">
       <a href="/">Home</a>
-      <a class="soon" title="Coming soon">About</a>
+      <a href="/about">About</a>
       <a href="/rules-vs-laws">Writings</a>
       <a class="cta" href="#contact">Get in touch</a>
     </nav>
@@ -409,38 +392,22 @@
     </div>
 
     <div class="areas reveal">
-      <a class="area" href="/practice/contracts-disputes">
+      <div class="area">
         <h3>Contracts &amp; Dispute Resolution</h3>
         <p>Advising and representing clients in contract negotiation and disputes. When you need an independent attorney perspective on a potential or actual conflict, I can assist.</p>
         <span class="more">Explore <span class="arw">→</span></span>
-      </a>
+      </div>
 
-      <a class="area" href="/practice/construction-public-works">
+      <div class="area">
         <h3>Construction &amp; Public Works</h3>
         <p>I review contracts, claims, liens and more, sharpening how clients present arguments to favor a swift and substantial recovery.</p>
         <span class="more">Explore <span class="arw">→</span></span>
-      </a>
+      </div>
 
-      <a class="area" href="/practice/land-use-real-estate">
+      <div class="area">
         <h3>Land Use &amp; Real Estate</h3>
         <p>I focus on land use and disputes with the government. I may also advise and represent legal services clients in transactions. Let's talk real estate!</p>
         <span class="more">Explore <span class="arw">→</span></span>
-      </a>
-    </div>
-  </section>
-</div>
-
-<!-- ============ ABOUT TEASER ============ -->
-<div class="about-band">
-  <section class="wrap">
-    <div class="about-grid">
-      <div class="reveal">
-        <span class="mono">Background</span>
-        <h2>B2B Transactions and Construction.</h2>
-      </div>
-      <div class="reveal">
-        <span class="txt-soon">Want to know more about my background? Check out my "About" page or get in touch.
-          Here is my <a href="https://www.linkedin.com/in/charles-iantorno999/" target="_blank" rel="noopener noreferrer"><strong>LinkedIn</strong></a>.</span>
       </div>
     </div>
   </section>
