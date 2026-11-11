@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<Charles A. Iantorno — Real Estate, Construction, &amp; and Commercial Enterprise Attorney in Los Angeles</title>
+<title><Charles A. Iantorno — Real Estate, Construction, &amp; Commercial Enterprise Attorney in Los Angeles</title>
 <meta name="description" content="Los Angeles attorney for businesses — dispute resolution and business risk, construction and public works, land use and entitlements. A lawyer working directly for you." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -106,8 +106,8 @@
             mask-image:radial-gradient(120% 90% at 78% 12%,#000 0%,transparent 62%);
   }
   .hero-grid{
-    position:relative;display:grid;grid-template-columns:1.32fr .9fr;
-    gap:56px;align-items:center;padding:84px 0 92px;
+    grid-template-columns: minmax(0,1.18fr) minmax(300px,.92fr);
+  gap: 48px;
   }
   .eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:26px;}
   .eyebrow .tick{width:26px;height:1px;background:var(--line-strong);}
@@ -131,18 +131,15 @@
   .btn:hover .arw{transform:translateX(3px);}
 
   /* headshot slot with anti-blur rendering */
-  .portrait{position:relative;max-width:270px;margin-left:auto;}
-  .portrait .frame{
-    position:relative;border:1px solid var(--line-strong);background:var(--mist);
-    aspect-ratio:4/5;overflow:hidden;
-  }
+  .portrait{ max-width: 340px; margin-left: auto; }
+  .portrait .frame{ aspect-ratio: 4/5; }
   .portrait .frame img{
-    width:150%;height:150%;object-fit:cover;object-position:center 22%;
-    position:relative;z-index:2;
-    image-rendering:-webkit-optimize-contrast;
-    transform:translateZ(0);
-    backface-visibility:hidden;
-  }
+  width:100%; height:100%;
+  object-fit: cover;
+  object-position: center 22%;   /* keep the face high in frame */
+  transform: scale(1.06);        /* optional: slight zoom, cleanly centered */
+  transform-origin: center 22%;
+}
   .mono-fallback{
     position:absolute;inset:0;display:none;align-items:center;justify-content:center;
     font-family:"Newsreader",Georgia,serif;font-weight:500;font-size:64px;color:var(--steel);
@@ -259,9 +256,9 @@
   }
 
   /* responsive */
-  @media (max-width:760px){
-    .sec-head h2.oneline{white-space:normal;}
-  }
+  @media (max-width:900px){
+  .portrait{ max-width: 300px; margin: 0 auto; }  /* centered, not left-hugging */
+}
   @media (max-width:900px){
     .hero-grid{grid-template-columns:1fr;gap:40px;padding:60px 0 68px;}
     .portrait{max-width:240px;margin:0;}
@@ -299,8 +296,8 @@
     <a class="brand" href="/" aria-label="Law Office of Charles A. Iantorno — home">
       <img class="logo-mark" alt="Layered pennant logo mark" src="data:image/png;base64,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" />
       <span class="name">
-        <b>Charles A. Iantorno</b>
-        <span>Attorney at Law</span>
+        <b>Charles A. Iantorno, Esq.</b>
+        <span>Enterprise Counsel</span>
       </span>
     </a>
 
@@ -325,13 +322,13 @@
         <span class="tick"></span>
       </div>
       <h1 class="thesis display">
-        Real Estate and <em>Construction</em>
+        Real Estate and <em>Construction Attorney</em>
       </h1>
       <p class="lede">
         I'm Charles A. Iantorno, an attorney based in Los Angeles. Welcome to my website.
         Landowners, developers, general contractors, and business owners hire me to resolve
         <strong>disputes, draft and negotiate contracts, uncover opportunities, and manage risk</strong>.
-        Occassionally, I will operate as a principal.
+        I may also invest or operate as a principal.
         The purpose of my practice is to help transform Los Angeles into the greatest city in the world.
       </p>
       <div class="actions">
@@ -384,11 +381,10 @@
   <section id="practice" class="wrap">
     <div class="sec-head reveal">
       <h2 class="oneline">Mitigating risks and seizing opportunities.</h2>
-      <p class="sec-lead">Builders, brands and every kind of business inbetween could use a competent lawyer. 
-        Unfortunetly in the US today, the laws are written so cryptically that it is almost impossible for a 
+      <p class="sec-lead">Builders, brands and every kind of business in between could use a competent lawyer. 
+        Unfortunately in the US today, the laws are written so cryptically that it is almost impossible for a 
         busy business-owner to find out what the law actually requires. Artificial Intelligence may help,
-        but those systems are designed to keep you engaged with them. They'll often tell you what you want to hear. 
-        AI is no substitute for having a confidential, human attorney looking out for your business.
+        but I would not rely on those systems. AI is no substitute for having a confidential, human attorney looking out for your business.
      </p>
     </div>
 
@@ -467,7 +463,7 @@
 
     <div class="contact-cta reveal">
       <a class="btn primary" href="mailto:charles@deskofcharles.com">Email Charles <span class="arw">→</span></a>
-      <p> An attorney-client relationship may only formed by a personalized agreement signed by Charles. </p>
+      <p> An attorney-client relationship may only be formed by a personalized agreement signed by Charles. </p>
     </div>
   </section>
 </div>
