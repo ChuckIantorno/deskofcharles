@@ -91,7 +91,7 @@
   .menu-btn{display:none;}
 
   /* ---- page hero ---- */
-  .page-hero{position:relative;overflow:hidden;padding:84px 0 20px;}
+  .page-hero{position:relative;overflow:hidden;padding:84px 0 40px;}
   .page-hero::before{
     content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
     background-image:
@@ -101,12 +101,54 @@
     -webkit-mask-image:radial-gradient(120% 90% at 22% 12%,#000 0%,transparent 62%);
             mask-image:radial-gradient(120% 90% at 22% 12%,#000 0%,transparent 62%);
   }
-  .page-hero .eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:22px;position:relative;}
-  .page-hero .eyebrow .tick{width:26px;height:1px;background:var(--line-strong);}
-  .page-hero h1{
+  .hero-grid{
     position:relative;
-    font-size:clamp(40px,5.5vw,66px);
-    margin:0;max-width:20ch;
+    display:grid;
+    grid-template-columns:minmax(0,1.18fr) minmax(300px,.92fr);
+    gap:48px;
+    align-items:center;
+  }
+  .hero-copy .eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:22px;position:relative;}
+  .hero-copy .eyebrow .tick{width:26px;height:1px;background:var(--line-strong);}
+
+  /* portrait */
+  .portrait{position:relative;max-width:340px;margin-left:auto;}
+  .portrait .frame{
+    position:relative;
+    border:1px solid var(--line-strong);
+    background:var(--mist);
+    aspect-ratio:4/5;
+    overflow:hidden;
+  }
+  .portrait .frame img{
+    width:100%;height:100%;
+    object-fit:cover;
+    object-position:center 22%;
+    transform:scale(1.06);
+    transform-origin:center 22%;
+    position:relative;
+    z-index:2;
+    image-rendering:-webkit-optimize-contrast;
+    backface-visibility:hidden;
+  }
+  .portrait .mono-fallback{
+    position:absolute;inset:0;display:none;align-items:center;justify-content:center;
+    font-family:"Newsreader",Georgia,serif;font-weight:500;font-size:64px;color:var(--steel);
+    background:
+      linear-gradient(135deg,#eaf1f5,#dfe9ef),
+      repeating-linear-gradient(45deg,transparent,transparent 22px,rgba(46,107,146,.06) 22px,rgba(46,107,146,.06) 23px);
+    letter-spacing:.02em;z-index:1;
+  }
+  .portrait .frame.noimg .mono-fallback{display:flex;}
+  .portrait .cap{
+    display:flex;justify-content:space-between;align-items:baseline;
+    margin-top:12px;
+  }
+  .portrait .cap .who{font-family:"Newsreader",Georgia,serif;font-weight:600;color:var(--ink);font-size:15px;}
+  .portrait .frame::after{
+    content:"";position:absolute;top:10px;right:10px;width:16px;height:16px;
+    border-top:1.5px solid var(--steel);border-right:1.5px solid var(--steel);opacity:.7;
+    z-index:3;
   }
 
   /* ---- prose ---- */
@@ -181,6 +223,8 @@
   .foot-legal .mono{color:#6b747b;font-size:11px;}
 
   @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:40px;padding:60px 0 68px;}
+    .portrait{max-width:300px;margin:0 auto;}
     .pet-single{max-width:100%;}
   }
   @media (max-width:640px){
@@ -231,12 +275,24 @@
 
   <!-- ============ PAGE HERO ============ -->
   <section class="page-hero">
-    <div class="wrap">
-      <div class="eyebrow">
-        <span class="tick"></span>
-        <span class="mono">About</span>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="tick"></span>
+          <span class="mono">About Me</span>
+        </div>
       </div>
-      <h1 class="display">Charles A. Iantorno</h1>
+      <div class="portrait">
+        <div class="frame">
+          <img src="/assets/me-seated.jpg" alt="Charles A. Iantorno, attorney"
+               onerror="this.style.display='none';this.parentNode.classList.add('noimg');" />
+          <div class="mono-fallback" aria-hidden="true">CI</div>
+        </div>
+        <div class="cap">
+          <span class="who">Charles A. Iantorno</span>
+          <span class="mono">Attorney</span>
+        </div>
+      </div>
     </div>
   </section>
 
