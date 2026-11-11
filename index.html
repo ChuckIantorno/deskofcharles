@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title><Charles A. Iantorno — Real Estate, Construction, &amp; Commercial Enterprise Attorney in Los Angeles</title>
+<title>Charles A. Iantorno — Real Estate, Construction &amp; Commercial Enterprise Attorney in Los Angeles</title>
 <meta name="description" content="Los Angeles attorney for businesses — dispute resolution and business risk, construction and public works, land use and entitlements. A lawyer working directly for you." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,12 +12,12 @@
 
 <style>
   :root{
-    --ink:#123A52;        /* deep oceanic navy — primary */
-    --steel:#2E6B92;      /* steel blue — single accent */
-    --silver:#C6CDD3;     /* silver — hairlines, muted */
-    --charcoal:#1A1A1A;   /* body ink */
+    --ink:#123A52;
+    --steel:#2E6B92;
+    --silver:#C6CDD3;
+    --charcoal:#1A1A1A;
     --paper:#FFFFFF;
-    --mist:#F4F7F9;       /* faint blue-grey ground */
+    --mist:#F4F7F9;
     --line:rgba(18,58,82,.14);
     --line-strong:rgba(18,58,82,.28);
     --measure:66ch;
@@ -71,10 +71,6 @@
     font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:16px;
     color:var(--ink);letter-spacing:-.01em;
   }
-  .brand .name span{
-    font-family:"Hanken Grotesk",sans-serif;font-size:10px;letter-spacing:.18em;
-    text-transform:uppercase;color:var(--steel);margin-top:2px;
-  }
   nav.links{display:flex;align-items:center;gap:30px;}
   nav.links a{
     text-decoration:none;font-size:14px;font-weight:500;color:var(--ink);
@@ -106,8 +102,12 @@
             mask-image:radial-gradient(120% 90% at 78% 12%,#000 0%,transparent 62%);
   }
   .hero-grid{
-    grid-template-columns: minmax(0,1.18fr) minmax(300px,.92fr);
-  gap: 48px;
+    position:relative;
+    display:grid;
+    grid-template-columns:minmax(0,1.18fr) minmax(300px,.92fr);
+    gap:48px;
+    align-items:center;
+    padding:84px 0 92px;
   }
   .eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:26px;}
   .eyebrow .tick{width:26px;height:1px;background:var(--line-strong);}
@@ -130,16 +130,26 @@
   .btn .arw{transition:transform .2s ease;}
   .btn:hover .arw{transform:translateX(3px);}
 
-  /* headshot slot with anti-blur rendering */
-  .portrait{ max-width: 340px; margin-left: auto; }
-  .portrait .frame{ aspect-ratio: 4/5; }
+  /* portrait */
+  .portrait{position:relative;max-width:340px;margin-left:auto;}
+  .portrait .frame{
+    position:relative;
+    border:1px solid var(--line-strong);
+    background:var(--mist);
+    aspect-ratio:4/5;
+    overflow:hidden;
+  }
   .portrait .frame img{
-  width:100%; height:100%;
-  object-fit: cover;
-  object-position: center 22%;   /* keep the face high in frame */
-  transform: scale(1.06);        /* optional: slight zoom, cleanly centered */
-  transform-origin: center 22%;
-}
+    width:100%;height:100%;
+    object-fit:cover;
+    object-position:center 22%;
+    transform:scale(1.06);
+    transform-origin:center 22%;
+    position:relative;
+    z-index:2;
+    image-rendering:-webkit-optimize-contrast;
+    backface-visibility:hidden;
+  }
   .mono-fallback{
     position:absolute;inset:0;display:none;align-items:center;justify-content:center;
     font-family:"Newsreader",Georgia,serif;font-weight:500;font-size:64px;color:var(--steel);
@@ -147,6 +157,7 @@
       linear-gradient(135deg,#eaf1f5,#dfe9ef),
       repeating-linear-gradient(45deg,transparent,transparent 22px,rgba(46,107,146,.06) 22px,rgba(46,107,146,.06) 23px);
     letter-spacing:.02em;
+    z-index:1;
   }
   .portrait .frame.noimg .mono-fallback{display:flex;}
   .portrait .cap{
@@ -157,6 +168,7 @@
   .portrait .frame::after{
     content:"";position:absolute;top:10px;right:10px;width:16px;height:16px;
     border-top:1.5px solid var(--steel);border-right:1.5px solid var(--steel);opacity:.7;
+    z-index:3;
   }
 
   /* ---- section scaffolding ---- */
@@ -174,21 +186,31 @@
 
   /* practice areas */
   .practice{background:var(--mist);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .areas{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);background:var(--paper);}
-  .area{padding:38px 32px;border-right:1px solid var(--line);}
+  .areas{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+    border:1px solid var(--line);background:var(--paper);
+  }
+  .area{
+    display:block;padding:38px 32px;border-right:1px solid var(--line);
+    text-decoration:none;color:inherit;position:relative;
+    transition:background .25s ease;
+  }
+  .area:hover{background:var(--mist);}
   .area:last-child{border-right:none;}
-  .area .tag{margin-bottom:20px;}
   .area h3{
     font-family:"Newsreader",Georgia,serif;font-weight:600;color:var(--ink);
     font-size:23px;line-height:1.16;margin:0 0 14px;letter-spacing:-.005em;
+    transition:color .2s ease;
   }
+  .area:hover h3{color:var(--steel);}
   .area p{margin:0;font-size:16.5px;color:#324551;line-height:1.6;}
-  .area .list{margin:18px 0 0;padding:0;list-style:none;}
-  .area .list li{
-    font-size:15px;color:#42525b;padding:7px 0;border-top:1px solid var(--line);
-    display:flex;gap:9px;align-items:baseline;
+  .area .more{
+    display:inline-flex;align-items:center;gap:7px;margin-top:22px;
+    font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--steel);
   }
-  .area .list li::before{content:"—";color:var(--steel);}
+  .area .more .arw{transition:transform .2s ease;}
+  .area:hover .more .arw{transform:translateX(3px);}
 
   /* how I work */
   .hiw{
@@ -217,8 +239,8 @@
   .about-band p strong{color:#fff;font-weight:600;}
   .about-band a.txt{color:#fff;text-decoration:none;border-bottom:1.5px solid var(--steel);padding-bottom:2px;font-weight:500;}
   .about-band a.txt:hover{border-color:#fff;}
-  .about-band .txt-soon{color:#7f9fb5;font-weight:500;font-size:15px;letter-spacing:.01em;}
-  .about-band .txt-soon a{color:#fff;text-decoration:underline;}
+  .about-band .txt-soon{color:#cbdae4;font-weight:400;font-size:15.5px;line-height:1.6;letter-spacing:.01em;}
+  .about-band .txt-soon a{color:#fff;text-decoration:underline;text-underline-offset:3px;}
 
   /* contact spec sheet */
   .contact{border-top:1px solid var(--line);}
@@ -233,7 +255,6 @@
   .cell .val{font-family:"Hanken Grotesk",sans-serif;font-size:15px;color:var(--ink);line-height:1.55;}
   .cell .val a{text-decoration:none;border-bottom:1px solid var(--silver);}
   .cell .val a:hover{border-color:var(--steel);color:var(--steel);}
-  .cell .val .tk{background:#fff4d6;padding:1px 5px;border:1px dashed #d3a83a;color:#8a6b16;font-size:12px;}
 
   .contact-cta{margin-top:38px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;}
   .contact-cta p{margin:0;font-size:15px;color:#52626b;max-width:44ch;}
@@ -257,11 +278,8 @@
 
   /* responsive */
   @media (max-width:900px){
-  .portrait{ max-width: 300px; margin: 0 auto; }  /* centered, not left-hugging */
-}
-  @media (max-width:900px){
     .hero-grid{grid-template-columns:1fr;gap:40px;padding:60px 0 68px;}
-    .portrait{max-width:240px;margin:0;}
+    .portrait{max-width:300px;margin:0 auto;}
     .areas{grid-template-columns:1fr;}
     .area{border-right:none;border-bottom:1px solid var(--line);}
     .area:last-child{border-bottom:none;}
@@ -270,6 +288,9 @@
     .sheet{grid-template-columns:1fr;}
     .cell{border-right:none !important;}
     .sheet .cell:not(:last-child){border-bottom:1px solid var(--line);}
+  }
+  @media (max-width:760px){
+    .sec-head h2.oneline{white-space:normal;}
   }
   @media (max-width:640px){
     .wrap{padding:0 22px;}
@@ -365,12 +386,12 @@
     <div class="principle">
       <div class="k mono">Strategic</div>
       <h3>Manage legal spend</h3>
-      <p>I keep the business moving and will advise on keeping legal and consulting costs low. </p>
+      <p>I keep the business moving and the legal spend predictable. No charge for short calls or initial consultations. For qualified matters, the first hour is free.</p>
     </div>
     <div class="principle">
       <div class="k mono">Efficient</div>
       <h3>No wasted time</h3>
-      <p>With your business goals top of mind, I'll present legal issues into clear options, so you can make a decision and be done with it. Let's not waste time.</p>
+      <p>With your business goals top of mind, I'll present legal issues as clear options, so you can make a decision and be done with it. Let's not waste time.</p>
     </div>
   </div>
 </section>
@@ -380,32 +401,31 @@
   <section id="practice" class="wrap">
     <div class="sec-head reveal">
       <h2 class="oneline">Mitigating risks and seizing opportunities.</h2>
-      <p class="sec-lead">Builders, brands and every kind of business in between could use a competent lawyer. 
-        Unfortunately in the US today, the laws are written so cryptically that it is almost impossible for a 
+      <p class="sec-lead">Builders, brands and every kind of business in between could use a competent lawyer.
+        Unfortunately in the US today, the laws are written so cryptically that it is almost impossible for a
         busy business-owner to find out what the law actually requires. Artificial Intelligence may help,
         but I would not rely on those systems. AI is no substitute for having a confidential, human attorney looking out for your business.
      </p>
     </div>
 
     <div class="areas reveal">
-      <div class="area">
-        <h3>Dispute Resolution </h3>
-        <p>Advising and representing clients in disputes &mdash; if you
-        need an independent attorney perspective on a potential or actual dispute,
-        I can assist. </p>
-      </div>
+      <a class="area" href="/practice/contracts-disputes">
+        <h3>Contracts &amp; Dispute Resolution</h3>
+        <p>Advising and representing clients in contract negotiation and disputes. When you need an independent attorney perspective on a potential or actual conflict, I can assist.</p>
+        <span class="more">Explore <span class="arw">→</span></span>
+      </a>
 
-      <div class="area">
-        <h3>Construction &amp; Public Works Claims </h3>
-        <p>I review contracts, claims, liens and more, sharpening how clients present arguments to favor a swift and substantial recovery.
-          </p>
-      </div>
+      <a class="area" href="/practice/construction-public-works">
+        <h3>Construction &amp; Public Works</h3>
+        <p>I review contracts, claims, liens and more, sharpening how clients present arguments to favor a swift and substantial recovery.</p>
+        <span class="more">Explore <span class="arw">→</span></span>
+      </a>
 
-      <div class="area">
+      <a class="area" href="/practice/land-use-real-estate">
         <h3>Land Use &amp; Real Estate</h3>
-        <p>I focus on land use and disputes with the government. I may also advise and represent legal services clients in transactions.
-          Let's talk real estate!</p>
-      </div>
+        <p>I focus on land use and disputes with the government. I may also advise and represent legal services clients in transactions. Let's talk real estate!</p>
+        <span class="more">Explore <span class="arw">→</span></span>
+      </a>
     </div>
   </section>
 </div>
@@ -419,8 +439,8 @@
         <h2>B2B Transactions and Construction.</h2>
       </div>
       <div class="reveal">
-        <span class="txt-soon"> Want to know more about my background? Check out my "About" page or get in touch. 
-          Here is my <a href="https://www.linkedin.com/in/charles-iantorno999/" target="_blank" rel="noopener noreferrer"><strong>LinkedIn</strong></a></span>
+        <span class="txt-soon">Want to know more about my background? Check out my "About" page or get in touch.
+          Here is my <a href="https://www.linkedin.com/in/charles-iantorno999/" target="_blank" rel="noopener noreferrer"><strong>LinkedIn</strong></a>.</span>
       </div>
     </div>
   </section>
@@ -446,7 +466,6 @@
       <div class="cell">
         <div class="lbl mono">Mailing Address</div>
         <div class="val">
-          <br>
           611 Wilshire Blvd, Suite 900 PMB 1086<br>
           Los Angeles, CA 90017
         </div>
@@ -492,7 +511,7 @@
 
     <p class="disclaimer">
       <strong>Attorney advertising.</strong> This website and its contents are provided for general informational
-      purposes only, not legal advice.  
+      purposes only, not legal advice.
     </p>
 
     <div class="foot-legal">
