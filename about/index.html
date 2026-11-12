@@ -91,7 +91,7 @@
   .menu-btn{display:none;}
 
   /* ---- page hero ---- */
-  .page-hero{position:relative;overflow:hidden;padding:84px 0 20px;}
+  .page-hero{position:relative;overflow:hidden;padding:84px 0 0;}
   .page-hero::before{
     content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
     background-image:
@@ -106,15 +106,20 @@
     display:grid;
     grid-template-columns:minmax(0,1.18fr) minmax(300px,.92fr);
     gap:48px;
-    align-items:start; /* This aligns the portrait to the top */
+    align-items:start;
   }
   
   .hero-copy h1 {
     font-size:clamp(40px,5.5vw,66px);
     margin:0 0 26px;
   }
+  
+  /* This matches the paragraph spacing perfectly */
   .hero-copy .lede {
-    font-size:18.5px;color:#33454f;max-width:52ch;margin:0;
+    font-size:18.5px;
+    color:#33454f;
+    max-width:52ch;
+    margin:0 0 26px;
     line-height:1.72;
   }
 
@@ -159,7 +164,7 @@
   }
 
   /* ---- prose ---- */
-  .about-body{padding:40px 0 8px;}
+  .about-body{padding:0 0 8px;}
   .prose{max-width:64ch;}
   .prose p{
     font-size:18.5px;line-height:1.72;color:#2b3d47;
