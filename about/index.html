@@ -91,7 +91,7 @@
   .menu-btn{display:none;}
 
   /* ---- page hero ---- */
-  .page-hero{position:relative;overflow:hidden;padding:84px 0 40px;}
+  .page-hero{position:relative;overflow:hidden;padding:84px 0 20px;}
   .page-hero::before{
     content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
     background-image:
@@ -106,10 +106,17 @@
     display:grid;
     grid-template-columns:minmax(0,1.18fr) minmax(300px,.92fr);
     gap:48px;
-    align-items:center;
+    align-items:start; /* This aligns the portrait to the top */
   }
-  .hero-copy .eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:22px;position:relative;}
-  .hero-copy .eyebrow .tick{width:26px;height:1px;background:var(--line-strong);}
+  
+  .hero-copy h1 {
+    font-size:clamp(40px,5.5vw,66px);
+    margin:0 0 26px;
+  }
+  .hero-copy .lede {
+    font-size:18.5px;color:#33454f;max-width:52ch;margin:0;
+    line-height:1.72;
+  }
 
   /* portrait */
   .portrait{position:relative;max-width:340px;margin-left:auto;}
@@ -157,9 +164,6 @@
   .prose p{
     font-size:18.5px;line-height:1.72;color:#2b3d47;
     margin:0 0 26px;
-  }
-  .prose p:first-of-type{
-    font-size:20px;color:#33454f;
   }
   .prose p:last-child{margin-bottom:0;}
 
@@ -223,7 +227,7 @@
   .foot-legal .mono{color:#6b747b;font-size:11px;}
 
   @media (max-width:900px){
-    .hero-grid{grid-template-columns:1fr;gap:40px;padding:60px 0 68px;}
+    .hero-grid{grid-template-columns:1fr;gap:40px;padding:60px 0 20px;}
     .portrait{max-width:300px;margin:0 auto;}
     .pet-single{max-width:100%;}
   }
@@ -242,7 +246,7 @@
     .menu-btn span{width:22px;height:2px;background:var(--ink);display:block;}
     body{font-size:16px;}
     .prose p{font-size:17.5px;}
-    .prose p:first-of-type{font-size:18.5px;}
+    .hero-copy .lede{font-size:17.5px;}
   }
 </style>
 </head>
@@ -277,10 +281,10 @@
   <section class="page-hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <div class="eyebrow">
-          <span class="tick"></span>
-          <span class="mono">About Me</span>
-        </div>
+        <h1 class="display">About Me</h1>
+        <p class="lede">
+          My first entrepreneurial enterprise was leading an exterior home painting business. I was a freshman at the University of Illinois Urbana-Champaign. Through a company called College Works Painting, I managed the full life-cycle of operations: sales, hiring, training, and project execution. Although I had no prior painting experience, I finished the summer profitably. That’s when I knew I’d be an entrepreneur. Yes, that path may be harder and more risky, but I could not imagine doing it any other way.
+        </p>
       </div>
       <div class="portrait">
         <div class="frame">
@@ -300,8 +304,6 @@
   <section class="about-body">
     <div class="wrap">
       <div class="prose">
-        <p>My first entrepreneurial enterprise was leading an exterior home painting business. I was a freshman at the University of Illinois Urbana-Champaign. Through a company called College Works Painting, I managed the full life-cycle of operations: sales, hiring, training, and project execution. Although I had no prior painting experience, I finished the summer profitably. That’s when I knew I’d be an entrepreneur. Yes, that path may be harder and more risky, but I could not imagine doing it any other way.</p>
-
         <p>My first full-time job after college was with a technology industry research and events company based in Palo Alto. My boss and I were responsible for business development and account management across the Americas. My boss was incredible, but she did not enjoy the details of contracts much. I quickly learned I had a talent for contract drafting and review, so the task of redlining with the other side came to me. I’d get the required signatures efficiently and effectively. I hit my sales targets consistently and learned a ton about the global technology industry.</p>
 
         <p>After a few years of B2B sales, my entrepreneurial ambition was back in full force. I knew I had more to learn about how the world actually worked, and I felt eager to give back through my career. I decided to take the LSAT and pursue law school. I immediately felt at home at the George Mason University Antonin Scalia Law School, right outside of Washington, D.C.</p>
