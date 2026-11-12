@@ -20,11 +20,7 @@
     --mist:#F4F7F9;
     --line:rgba(18,58,82,.14);
     --line-strong:rgba(18,58,82,.28);
-    
-    /* Spacing Scale - Change these numbers to adjust the whole page */
-    --space-hero: 84px;
-    --space-section: 84px;
-    --space-head: 44px;
+    --measure:66ch;
   }
 
   *{box-sizing:border-box;}
@@ -111,7 +107,7 @@
     grid-template-columns:minmax(0,1.18fr) minmax(300px,.92fr);
     gap:48px;
     align-items:center;
-    padding:var(--space-hero) 0;
+    padding:84px 0 92px;
   }
   .eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:26px;}
   .eyebrow .tick{width:26px;height:1px;background:var(--line-strong);}
@@ -176,8 +172,8 @@
   }
 
   /* ---- section scaffolding ---- */
-  section{padding:var(--space-section) 0;}
-  .sec-head{margin-bottom:var(--space-head);max-width:60ch;}
+  section{padding:78px 0;}
+  .sec-head{margin-bottom:44px;max-width:60ch;}
   .sec-head .mono{font-size:13px;letter-spacing:.16em;font-weight:600;}
   .sec-head h2{
     font-family:"Newsreader",Georgia,serif;font-weight:500;color:var(--ink);
@@ -190,6 +186,7 @@
 
   /* practice areas */
   .practice{background:var(--mist);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .practice section { padding-top: 82px; }
   .areas{
     display:grid;grid-template-columns:repeat(3,1fr);gap:0;
     border:1px solid var(--line-strong);background:var(--ink);
@@ -221,6 +218,7 @@
     background:linear-gradient(180deg,#E9F1F8 0%,#D4E3F0 100%);
     border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);
   }
+  .hiw section { padding-top: 82px; padding-bottom: 98px; }
   .principles{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;}
   .principle{border-top:2px solid var(--ink);padding-top:22px;}
   .principle .k{margin-bottom:14px;}
@@ -231,6 +229,7 @@
 
   /* contact spec sheet */
   .contact{border-top:1px solid var(--line);}
+  .contact section { padding-top: 82px; }
   .sheet{
     display:grid;grid-template-columns:1fr 1fr;gap:0;
     border:1px solid var(--line-strong);
@@ -265,7 +264,7 @@
 
   /* responsive */
   @media (max-width:900px){
-    .hero-grid{grid-template-columns:1fr;gap:40px;}
+    .hero-grid{grid-template-columns:1fr;gap:40px;padding:60px 0 68px;}
     .portrait{max-width:300px;margin:0 auto;}
     .areas{grid-template-columns:1fr;}
     .area{border-right:none;border-bottom:1px solid rgba(255,255,255,.15);}
