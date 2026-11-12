@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Charles A. Iantorno — Real Estate, Construction &amp; Commercial Enterprise Attorney in Los Angeles</title>
+<meta name="description" content="Los Angeles attorney for businesses — dispute resolution and business risk, construction and public works, land use and entitlements. A lawyer working directly for you." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
 <style>
   :root{
     --ink:#123A52;
@@ -8,11 +20,10 @@
     --mist:#F4F7F9;
     --line:rgba(18,58,82,.14);
     --line-strong:rgba(18,58,82,.28);
-    --measure:66ch;
-
-    /* Spacing scale */
-    --space-hero: 96px;
-    --space-section: 88px;
+    
+    /* Spacing Scale - Change these numbers to adjust the whole page */
+    --space-hero: 84px;
+    --space-section: 84px;
     --space-head: 44px;
   }
 
@@ -33,6 +44,7 @@
 
   .wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
 
+  /* ---- shared type devices ---- */
   .mono{
     font-family:"Hanken Grotesk",sans-serif;
     font-size:12px;
@@ -99,7 +111,7 @@
     grid-template-columns:minmax(0,1.18fr) minmax(300px,.92fr);
     gap:48px;
     align-items:center;
-    padding: var(--space-hero) 0;
+    padding:var(--space-hero) 0;
   }
   .eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:26px;}
   .eyebrow .tick{width:26px;height:1px;background:var(--line-strong);}
@@ -164,8 +176,8 @@
   }
 
   /* ---- section scaffolding ---- */
-  section{padding: var(--space-section) 0;}
-  .sec-head{margin-bottom: var(--space-head);max-width:60ch;}
+  section{padding:var(--space-section) 0;}
+  .sec-head{margin-bottom:var(--space-head);max-width:60ch;}
   .sec-head .mono{font-size:13px;letter-spacing:.16em;font-weight:600;}
   .sec-head h2{
     font-family:"Newsreader",Georgia,serif;font-weight:500;color:var(--ink);
@@ -253,7 +265,7 @@
 
   /* responsive */
   @media (max-width:900px){
-    .hero-grid{grid-template-columns:1fr;gap:40px;padding: var(--space-hero) 0;}
+    .hero-grid{grid-template-columns:1fr;gap:40px;}
     .portrait{max-width:300px;margin:0 auto;}
     .areas{grid-template-columns:1fr;}
     .area{border-right:none;border-bottom:1px solid rgba(255,255,255,.15);}
@@ -282,3 +294,199 @@
     body{font-size:16px;}
   }
 </style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Charles A. Iantorno, Esq. — home">
+      <img class="logo-mark" alt="Logo" src="/assets/small_logo_white.png" />
+      <span class="name">
+        <b>Charles A. Iantorno, Esq.</b>
+      </span>
+    </a>
+
+    <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="links" id="nav">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/rules-vs-laws">Writings</a>
+      <a class="cta" href="#contact">Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <div class="eyebrow">
+        <span class="tick"></span>
+      </div>
+      <h1 class="thesis display">
+        Real Estate and <em>Construction Attorney</em>
+      </h1>
+      <p class="lede">
+        Hi, I'm Charles Iantorno, an attorney in Los Angeles, California. 
+        Landowners, developers, general contractors, and business owners hire me to <strong>resolve
+        disputes, draft and negotiate contracts, uncover opportunities, and manage risk</strong>.
+        I may also invest or operate as a principal.
+        The purpose of my practice is to help transform Los Angeles into the greatest city in the world.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#contact">Start a conversation
+          <span class="arw">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="portrait reveal">
+      <div class="frame">
+        <img src="/assets/ciantorno_suited.jpg" alt="Charles A. Iantorno, attorney"
+             onerror="this.style.display='none';this.parentNode.classList.add('noimg');" />
+        <div class="mono-fallback" aria-hidden="true">CI</div>
+      </div>
+      <div class="cap">
+        <span class="who">Charles A. Iantorno</span>
+        <span class="mono">Attorney</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hiw">
+<section class="wrap">
+  <div class="sec-head reveal">
+    <h2 class="oneline">Let's solve problems and get projects finished.</h2>
+  </div>
+  <div class="principles reveal">
+    <div class="principle">
+      <div class="k mono">Direct</div>
+      <h3>You work with me</h3>
+      <p>No rotating team, no handoffs to a name you never spoke to. The person you hire is the person doing the work.</p>
+    </div>
+    <div class="principle">
+      <div class="k mono">Strategic</div>
+      <h3>Manage legal spend</h3>
+      <p>I keep the business moving and the legal spend predictable. No charge for short calls or initial consultations. For qualified matters, the first hour is free.</p>
+    </div>
+    <div class="principle">
+      <div class="k mono">Efficient</div>
+      <h3>No wasted time</h3>
+      <p>With your business goals top of mind, I'll present legal issues as clear options, so you can make a decision and be done with it. Let's not waste time.</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="practice">
+  <section id="practice" class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="oneline">Mitigating risks and seizing opportunities.</h2>
+      <p class="sec-lead">Builders, brands and every kind of business in between could use a competent lawyer.
+        Unfortunately in the US today, the laws are written so cryptically that it is almost impossible for a
+        busy business-owner to find out what the law actually requires. Artificial Intelligence may help,
+        but I would not rely on those systems. AI is no substitute for having a confidential, human attorney looking out for your business.
+     </p>
+    </div>
+
+    <div class="areas reveal">
+      <div class="area">
+        <h3>Contracts &amp; Dispute Resolution</h3>
+        <p>Advising and representing clients in contract negotiation and disputes. When you need an independent attorney perspective on a potential or actual dispute, I can assist.</p>
+        <span class="more">Explore <span class="arw">→</span></span>
+      </div>
+
+      <div class="area">
+        <h3>Construction &amp; Public Works</h3>
+        <p>I review contracts, claims, liens and more, sharpening how clients present arguments to favor a swift and substantial recovery.</p>
+        <span class="more">Explore <span class="arw">→</span></span>
+      </div>
+
+      <div class="area">
+        <h3>Land Use &amp; Real Estate</h3>
+        <p>I focus on land use and disputes with the government. I may also advise and represent legal services clients in transactions. Let's talk real estate!</p>
+        <span class="more">Explore <span class="arw">→</span></span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<div class="contact">
+  <section id="contact" class="wrap">
+    <div class="sec-head reveal">
+      <span class="mono">Contact</span>
+    </div>
+
+    <div class="sheet reveal">
+      <div class="cell">
+        <div class="lbl mono">Email</div>
+        <div class="val"><a href="mailto:charles@deskofcharles.com">charles@deskofcharles.com</a></div>
+      </div>
+      <div class="cell">
+        <div class="lbl mono">Telephone</div>
+        <div class="val"><a href="tel:+13233305074">+1 (323) 330-5074</a></div>
+      </div>
+      <div class="cell">
+        <div class="lbl mono">Mailing Address</div>
+        <div class="val">
+          611 Wilshire Blvd, Suite 900 PMB 1086<br>
+          Los Angeles, CA 90017
+        </div>
+      </div>
+      <div class="cell">
+        <div class="lbl mono">Bar Admissions</div>
+        <div class="val">
+          California · No. 368892<br>
+          District of Columbia · No. 90004155
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-cta reveal">
+      <a class="btn primary" href="mailto:charles@deskofcharles.com">Email Charles <span class="arw">→</span></a>
+      <p> An attorney-client relationship may only be formed by a personalized agreement signed by Charles. </p>
+    </div>
+  </section>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <img src="/assets/small_logo_color.png" alt="Logo" />
+        <b>Charles A. Iantorno, Esq.</b>
+      </div>
+      <div class="mono" style="color:#7d868d;">Los Angeles, California</div>
+    </div>
+
+    <p class="disclaimer">
+      <strong>Attorney advertising.</strong> This website content is provided for general informational
+      purposes only and is not legal advice.
+    </p>
+
+    <div class="foot-legal">
+      <span>© 2026 Charles A. Iantorno. All rights reserved.</span>
+      <span class="mono">deskofcharles.com</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){en.target.classList.add('in'); io.unobserve(en.target);} });
+    },{threshold:.12});
+    els.forEach(function(e){io.observe(e);});
+  })();
+</script>
+</body>
+</html>
